@@ -8,3 +8,12 @@ $('.saveBtn').on('click', function() {
     // save in localStorage with divId as key and textArea as value
     localStorage.setItem(divId, textAreaValue);
 })
+
+//need local storage.get item to pull yext values from local storage and redisplay
+$("#9 .description").val(localStorage.getItem('9')) 
+$("#10 .description").val(localStorage.getItem('10')) 
+$("#11 .description").val(localStorage.getItem('11')) 
+$("#12 .description").val(localStorage.getItem('12')) 
+$("#13 .description").val(localStorage.getItem('13')) 
+$("#14 .description").val(localStorage.getItem('14')) 
+$("#15 .description").val(localStorage.getItem('15')) 
