@@ -17,3 +17,20 @@ $("#12 .description").val(localStorage.getItem('12'))
 $("#13 .description").val(localStorage.getItem('13')) 
 $("#14 .description").val(localStorage.getItem('14')) 
 $("#15 .description").val(localStorage.getItem('15')) 
+
+function cssUpdate() {
+    // get current hour rounded down
+    var hour = moment().hours();
+  //finds time blocks
+    $('.time-block').each(function() {
+      var divNumber = $(this).attr('id')
+      if (divNumber < hour) {
+        $(this).addClass("past");
+      } else if (divNumber == hour) {
+$(this).addClass("present")
+      } else {
+        $(this).addClass("future")
+      }
+    });
+  }
+  cssUpdate()
